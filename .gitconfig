@@ -1,0 +1,5 @@
+[user]
+	email = isaacg@bu.edu
+	name = saacg
+[credential]
+	helper = cache --timeout=7200
