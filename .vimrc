@@ -10,7 +10,7 @@ set clipboard=unnamedplus
 syntax enable
 
 " show line numbers
-set number
+" set number
 
 " set tabs to have 4 spaces
 set ts=4
@@ -25,7 +25,7 @@ set expandtab
 set shiftwidth=4
 
 " show a visual line under the cursor's current line
-set cursorline
+"set cursorline
 
 " show matching parts of pairs for [] {} and ()
 set showmatch
@@ -47,8 +47,8 @@ augroup configgroup
 	autocmd FileType ruby setlocal tabstop=2
 	autocmd FileType ruby setlocal shiftwidth=2
 	autocmd FileType ruby setlocal softtabstop=2
-	autocmd FileType ruby setlocal commentsstring=#\ %s
-	autocmd FileType python setlocal commentsstring=#\ %s
+	autocmd FileType ruby setlocal commentstring=#\ %s
+	autocmd FileType python setlocal commentstring=#\ %s
 	autocmd BufEnter *.cls setlocal filetype=java
 	autocmd BufEnter *.zsh-theme setlocal filetype=zsh
 	autocmd BufEnter Makefile setlocal noexpandtab
