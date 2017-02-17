@@ -33,10 +33,19 @@ set showmatch
 " enable all python highlighting features
 let python_highlight_all = 1
 
+function! <SID>StripTrailingWhitespaces()
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
 augroup configgroup
 	autocmd!
 	autocmd VimEnter * highlight clear SignColumn
-	autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md: call <SID>StripTrailWhitespaces()
+	autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md :call <SID>StripTrailingWhitespaces()
 	autocmd FileType java setlocal noexpandtab
 	autocmd FileType java setlocal list
 	autocmd FileType java setlocal listchars=tab:+\ ,eol:-
