@@ -33,6 +33,7 @@ set showmatch
 " enable all python highlighting features
 let python_highlight_all = 1
 
+" saw this function at vimcasts.org/episodes/tidying-whitespace/
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
     let l = line(".")
