@@ -3,6 +3,8 @@ filetype plugin indent on
 " syntax on
 set encoding=utf-8
 set clipboard=unnamedplus
+set ff=unix
+colorscheme ron
 
 " set up for python - taken from https://www.fullstackpython.com/vim.html
 
